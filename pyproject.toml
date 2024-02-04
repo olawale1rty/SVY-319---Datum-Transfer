@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "datum transfer calculator"
+version = "0.1.0"
+description = "An app to do datum transfer given the secondary and standard port in csv format."
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+numpy = "^1.26.3"
+pandas = "^2.2.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.0"
+pyinstaller = "^6.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
