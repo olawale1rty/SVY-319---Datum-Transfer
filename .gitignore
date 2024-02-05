@@ -3,3 +3,6 @@ binaries/
 dist/
 build/
 .idea/
+.DS_Store
+.vscode
+*.spec

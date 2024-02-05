@@ -41,7 +41,7 @@ class DatumTransferCalculatorApp(tk.Tk):
             self,
             text="Run",
             command=lambda: self.on_execute_button(
-                self.entry_for_file1, self.entry_for_file2, self
+                self.entry_for_file1, self.entry_for_file2
             ),
         )
 
@@ -109,7 +109,8 @@ class DatumTransferCalculatorApp(tk.Tk):
             low_ranges, low_means, high_ranges, high_means
         )
 
-        new_gauge_sounding_datum = [round(i, 2) for i in new_gauge_sounding_datum]
+        new_gauge_sounding_datum = [round(i, 2)
+                                    for i in new_gauge_sounding_datum]
 
         return new_gauge_sounding_datum, low_ranges, low_means, high_ranges, high_means
 
@@ -148,7 +149,8 @@ class DatumTransferCalculatorApp(tk.Tk):
         result_dialog.title("New Gauge Sounding Datum")
         # result_label = tk.Label(result_dialog, text="New Sounding Datum:\n" + str(results))
         # result_label.pack()
-        tree = ttk.Treeview(result_dialog, columns=results.columns, show="headings")
+        tree = ttk.Treeview(
+            result_dialog, columns=results.columns, show="headings")
         num = 0
         for col in results.columns:
             tree.heading(num, text=col)
@@ -174,7 +176,8 @@ class DatumTransferCalculatorApp(tk.Tk):
             defaultextension=".csv", filetypes=[("CSV", "*.csv")]
         )
         results.to_csv(save_path, index=False)  # saves to a csv file
-        tk.messagebox.showinfo("Show Successful", "Result saved successfully as CSV.")
+        tk.messagebox.showinfo(
+            "Show Successful", "Result saved successfully as CSV.")
 
     def on_execute_button(self, entry_file1: tk.Entry, entry_file2: tk.Entry):
         """

@@ -4,11 +4,28 @@ An application that calculates datum transfer given the secondary and standard p
 
 ### Input Data
 
+Each input data is a csv file with the following columns:
+
+- Time_H
+- HW
+- Time_L
+- LW
+
+where Time_H is High Water Time, HW is High Water, Time_L is Low Water Time and LW is Low Water of the port.
+
+E.g of an input data: Using the Lagos bar reading and the Calabar bar reading gotten from the Nigerian Ports Authority tidal table book.
+
+The data was created into a csv file with the columns above for each port and the files are in the 'assets' directory.
+
 ### Output Data
+
+The output data is also a csv file that can be saved into any directory after previewing the data.
+
+An example of the output data is the 'Results.csv' file in the 'assets' directory which used the Lagos bar reading as standard port and the Calabar bar reading as secondary port.
 
 ### Installation
 
-Binary executables for this project for windows can be found in the release section.
+Binary executables for this project for windows, mac and linux can be found in the release section also.
 
 ### Development Setup
 
